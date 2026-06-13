@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,69 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astrolabo</title>
     <style>
-        /* Style global avec un fond spatial clair et lumineux */
-        body {
+        /* Reset et centrage parfait */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Fond dégradé radial lumineux, comme une aube cosmique */
-            background: radial-gradient(circle at center, #ffffff 0%, #e6f7ff 60%, #d1f2ff 100%);
-            color: #333333; /* Texte sombre pour un bon contraste */
-            font-family: 'Courier New', Courier, monospace;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b; /* Bleu-gris très foncé et doux pour le texte */
+            
+            /* Fond "Espace Clair" : Dégradé de nébuleuses pastel */
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.6) 0px, transparent 50%),   /* Bleu ciel */
+                radial-gradient(at 100% 0%, rgba(243, 232, 255, 0.6) 0px, transparent 50%), /* Violet aube */
+                radial-gradient(at 50% 100%, rgba(224, 242, 254, 0.5) 0px, transparent 50%);/* Éclat polaire */
+            
             overflow: hidden;
         }
 
-        /* Conteneur principal */
-        .console {
+        /* Conteneur principal minimaliste */
+        .card {
             text-align: center;
-            padding: 20px;
+            padding: 40px;
+            animation: fadeIn 1.5s ease-out;
         }
 
-        /* Titre principal */
+        /* Nom de la marque avec un effet d'espacement élégant */
         h1 {
-            font-size: 2rem;
-            font-weight: normal;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            color: #007acc; /* Bleu vif pour le titre */
-            text-shadow: 0 0 5px rgba(0, 122, 204, 0.2);
-        }
-
-        /* Style de la citation / commande */
-        blockquote {
-            font-size: 1.2rem;
-            color: #555555; /* Gris moyen pour la citation */
-            margin: 0 0 30px 0;
-            font-style: italic;
-        }
-
-        /* Le curseur clignotant (_) */
-        .cursor {
-            display: inline-block;
-            width: 12px;
-            height: 3px;
-            background-color: #00cc66; /* Vert vif pour le curseur */
-            animation: blink 1s infinite;
-            box-shadow: 0 0 8px rgba(0, 204, 102, 0.3);
-        }
-
-        /* Animation du clignotement */
-        @keyframes blink {
-            0%, 49% { background-color: #00cc66; }
-            50%, 100% { background-color: transparent; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="console">
-        <h1>Astrolabo - Operating System On Cloud</h1>
-        <blockquote>&gt; Astro is operating.</blockquote>
-        <div class="cursor"></div>
-    </div>
-
-</body>
-</html>
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #1e40af, #6b21a8); /* Dégradé discret bleu/violet sur le texte */
+            -webkit-background-clip: text;
+            -webkit-text-fill
